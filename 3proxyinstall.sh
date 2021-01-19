@@ -19,7 +19,5 @@ cd /etc/init.d/
 wget --no-check-certificate https://raw.github.com/EbasH3/3proxy/master/3proxy
 chmod  +x /etc/init.d/3proxy
 update-rc.d 3proxy defaults
-sed -i '30s/^/-A ufw-before-input -p icmp --icmp-type echo-request -j DROP\n/' /etc/ufw/before.rules # Определяем анонимность сервера
-sudo service openvpn stop
-sudo systemctl stop openvpn.service
-sudo systemctl disable openvpn.service
+sed -i '34s/^/-A ufw-before-input -p icmp --icmp-type echo-request -j DROP\n/' /etc/ufw/before.rules # Двухсторонний пинг
+sed -i '34s/^/-A ufw-before-input -p icmp --icmp-type echo-reply -j DROP\n/' /etc/ufw/before.rules # Двухсторонний пинг
