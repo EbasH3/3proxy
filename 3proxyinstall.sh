@@ -11,7 +11,7 @@ mv 3proxy /etc/3proxy/
 cd /etc/3proxy/
 wget --no-check-certificate https://github.com/SnoyIatk/3proxy/raw/master/3proxy.cfg
 chmod 600 /etc/3proxy/3proxy.cfg
-mkdir /var/log/3proxy/
+mkdir /var/log/3proxy3/
 wget --no-check-certificate https://github.com/SnoyIatk/3proxy/raw/master/.proxyauth
 chmod 600 /etc/3proxy/.proxyauth
 cd /etc/init.d/
