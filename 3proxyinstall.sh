@@ -5,7 +5,7 @@ wget --no-check-certificate -O 3proxy-${version}.tar.gz https://github.com/z3APA
 tar xzf 3proxy-${version}.tar.gz
 cd 3proxy-${version}
 make -f Makefile.Linux
-cd bin
+cd /root/3proxy-${version}/bin
 mkdir /etc/3proxy/
 mv 3proxy /etc/3proxy/
 cd /etc/3proxy/
