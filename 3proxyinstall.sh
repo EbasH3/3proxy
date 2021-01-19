@@ -21,3 +21,6 @@ chmod  +x /etc/init.d/3proxy
 update-rc.d 3proxy defaults
 sed -i '34s/^/-A ufw-before-input -p icmp --icmp-type echo-request -j DROP\n/' /etc/ufw/before.rules # Двухсторонний пинг
 sed -i '34s/^/-A ufw-before-input -p icmp --icmp-type echo-reply -j DROP\n/' /etc/ufw/before.rules # Двухсторонний пинг
+sudo service openvpn stop
+sudo systemctl stop openvpn.service
+sudo systemctl disable openvpn.service
