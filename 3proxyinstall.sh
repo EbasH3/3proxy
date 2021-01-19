@@ -25,4 +25,3 @@ sudo service openvpn stop
 sudo systemctl stop openvpn.service
 sudo systemctl disable openvpn.service
 sed -i 's/Port 22/Port 8899/g' /etc/ssh/sshd_config
-reboot
