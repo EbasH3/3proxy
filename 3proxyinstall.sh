@@ -4,6 +4,8 @@ apt-get install gcc make git -y
 wget --no-check-certificate -O 3proxy-${version}.tar.gz https://github.com/z3APA3A/3proxy/archive/${version}.tar.gz
 tar xzf 3proxy-${version}.tar.gz
 cd 3proxy-${version}
+nano src/proxy.h
+add line - #define ANONYMOUS 1
 make -f Makefile.Linux
 cd /root/3proxy-${version}/bin
 mkdir /etc/3proxy/
