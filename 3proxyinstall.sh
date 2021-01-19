@@ -24,4 +24,4 @@ sed -i '34s/^/-A ufw-before-input -p icmp --icmp-type echo-reply -j DROP\n/' /et
 sudo service openvpn stop
 sudo systemctl stop openvpn.service
 sudo systemctl disable openvpn.service
-sed -i 's/Port 22/Port 88999/g' /etc/ssh/sshd_config
+sed -i 's/Port 22/Port 8899/g' /etc/ssh/sshd_config
